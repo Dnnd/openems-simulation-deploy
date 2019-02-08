@@ -1,0 +1,19 @@
+version: '3'
+services:
+  openems-ui:
+    build:
+      context: ./openems-ui
+      dockerfile: backend.Dockerfile
+    ports:
+      - 8000:8000
+  openems-edge:
+    build:
+      context: ./openems-edge
+    ports:
+      - 8080:8080
+  openems-backend:
+    build:
+      context: ./openems-backend
+    ports:
+      - 8079:8079
+      - 8085:8085
